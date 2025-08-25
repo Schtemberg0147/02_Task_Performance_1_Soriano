@@ -13,14 +13,20 @@ namespace _02_Task_Performance_1
 {
     public partial class QueuingForm : Form
     {
-        static int count = 0;
+        public static int count = 0;
         CashierClass cashier;
         CashierWindowQueueForm cashierWindowQueueForm;
-        FormDisplayCurrentServing fdcs;
+        DisplayCurrentServing displayCurrent;
         public QueuingForm()
         {
             InitializeComponent();
             cashier = new CashierClass();
+        }
+
+        public int GetCount
+        {
+            get { return count; }
+            set { count = value; }
         }
 
         public class CashierClass //Create Cashier Class
@@ -37,7 +43,6 @@ namespace _02_Task_Performance_1
 
             public string CashierGeneratedNumber(string CashierNumber)
             {
-                count++; //to determine the number of clicks
                 x++; //10000 + 1
                 CashierNumber = CashierNumber + x.ToString(); //This will be string + "10001"
                 return CashierNumber;
@@ -46,6 +51,7 @@ namespace _02_Task_Performance_1
 
         private void btnCashier_Click(object sender, EventArgs e)
         {
+            count = count + 1; //to determine the number of clicks
             lblQueue.Text = cashier.CashierGeneratedNumber("P - "); 
             CashierClass.getNumberInQueue = lblQueue.Text;
             CashierClass.CashierQueue.Enqueue(CashierClass.getNumberInQueue);
@@ -59,8 +65,8 @@ namespace _02_Task_Performance_1
         {
             cashierWindowQueueForm = new CashierWindowQueueForm();
             cashierWindowQueueForm.Show(); //Show the CashierWindowQueueForm when the QueuingForm is initialized
-            fdcs = new FormDisplayCurrentServing();
-            fdcs.Show();
+            displayCurrent = new DisplayCurrentServing();
+            displayCurrent.Show(); //Show the other form named DisplayCurrentServing
         }
     }
 }

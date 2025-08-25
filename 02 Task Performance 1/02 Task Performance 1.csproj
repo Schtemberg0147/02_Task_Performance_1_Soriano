@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B8DBE109-267E-4CDB-A4EC-A1AC00D0BED4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>_02_Laboratory_Exercise_1</RootNamespace>
-    <AssemblyName>02 Laboratory Exercise 1</AssemblyName>
+    <RootNamespace>_02_Task_Performance_1</RootNamespace>
+    <AssemblyName>02 Task Performance 1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,11 +52,11 @@
     <Compile Include="CashierWindowQueueForm.Designer.cs">
       <DependentUpon>CashierWindowQueueForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDisplayCurrentServing.cs">
+    <Compile Include="DisplayCurrentServing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDisplayCurrentServing.Designer.cs">
-      <DependentUpon>FormDisplayCurrentServing.cs</DependentUpon>
+    <Compile Include="DisplayCurrentServing.Designer.cs">
+      <DependentUpon>DisplayCurrentServing.cs</DependentUpon>
     </Compile>
     <Compile Include="QueuingForm.cs">
       <SubType>Form</SubType>
@@ -69,8 +69,8 @@
     <EmbeddedResource Include="CashierWindowQueueForm.resx">
       <DependentUpon>CashierWindowQueueForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDisplayCurrentServing.resx">
-      <DependentUpon>FormDisplayCurrentServing.cs</DependentUpon>
+    <EmbeddedResource Include="DisplayCurrentServing.resx">
+      <DependentUpon>DisplayCurrentServing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,6 +80,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QueuingForm.resx">
       <DependentUpon>QueuingForm.cs</DependentUpon>
